@@ -12,5 +12,7 @@ defmodule Store.Repo.Migrations.CreateCustomers do
 
       timestamps()
     end
+
+    create(unique_index(:customers, [:email]))
   end
 end

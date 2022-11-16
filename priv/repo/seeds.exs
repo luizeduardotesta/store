@@ -9,3 +9,14 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+
+customer = %{
+  Last_name: "1234",
+  email: "teste@teste.com",
+  first_name: "1234",
+  password: "123456",
+  password_confirmation: "123456"
+}
+
+customer
+|> Store.Customers.create_customer()
