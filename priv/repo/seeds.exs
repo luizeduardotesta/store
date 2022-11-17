@@ -20,3 +20,23 @@ customer = %{
 
 customer
 |> Store.Customers.create_customer()
+
+playstation =
+  %{
+    name: "playstation"
+    price: 3000
+    quantity: 300
+  }
+
+xbox =
+  %{
+    name: "xbox"
+    price: 2000
+    quantity: 100
+  }
+
+playstation
+|> Store.Products.create_product()
+
+xbox
+|> Store.Products.create_product()
