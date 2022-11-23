@@ -6,7 +6,7 @@ defmodule Store.Repo.Migrations.CreateCustomers do
       add :id, :binary_id, primary_key: true
       add :email, :string
       add :first_name, :string
-      add :Last_name, :string
+      add :last_name, :string
       add :password_hash, :string
       add :role, :string
 

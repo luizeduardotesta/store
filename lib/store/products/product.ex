@@ -8,7 +8,6 @@ defmodule Store.Products.Product do
     field :name, :string
     field :price, :decimal
     field :quantity, :integer
-
     has_many :orders_products, Store.OrderProducts.OrdersProduct
 
     timestamps()

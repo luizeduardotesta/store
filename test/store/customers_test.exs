@@ -8,7 +8,7 @@ defmodule Store.CustomersTest do
 
     import Store.CustomersFixtures
 
-    @invalid_attrs %{Last_name: nil, email: nil, first_name: nil, password_hash: nil, role: nil}
+    @invalid_attrs %{last_name: nil, email: nil, first_name: nil, password_hash: nil, role: nil}
 
     test "list_customers/0 returns all customers" do
       customer = customer_fixture()
@@ -21,10 +21,16 @@ defmodule Store.CustomersTest do
     end
 
     test "create_customer/1 with valid data creates a customer" do
-      valid_attrs = %{Last_name: "some Last_name", email: "some email", first_name: "some first_name", password_hash: "some password_hash", role: "some role"}
+      valid_attrs = %{
+        last_name: "some last_name",
+        email: "some email",
+        first_name: "some first_name",
+        password_hash: "some password_hash",
+        role: "some role"
+      }
 
       assert {:ok, %Customer{} = customer} = Customers.create_customer(valid_attrs)
-      assert customer.Last_name == "some Last_name"
+      assert customer.last_name == "some last_name"
       assert customer.email == "some email"
       assert customer.first_name == "some first_name"
       assert customer.password_hash == "some password_hash"
@@ -37,10 +43,17 @@ defmodule Store.CustomersTest do
 
     test "update_customer/2 with valid data updates the customer" do
       customer = customer_fixture()
-      update_attrs = %{Last_name: "some updated Last_name", email: "some updated email", first_name: "some updated first_name", password_hash: "some updated password_hash", role: "some updated role"}
+
+      update_attrs = %{
+        last_name: "some updated last_name",
+        email: "some updated email",
+        first_name: "some updated first_name",
+        password_hash: "some updated password_hash",
+        role: "some updated role"
+      }
 
       assert {:ok, %Customer{} = customer} = Customers.update_customer(customer, update_attrs)
-      assert customer.Last_name == "some updated Last_name"
+      assert customer.last_name == "some updated last_name"
       assert customer.email == "some updated email"
       assert customer.first_name == "some updated first_name"
       assert customer.password_hash == "some updated password_hash"

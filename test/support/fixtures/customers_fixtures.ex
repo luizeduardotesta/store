@@ -11,7 +11,7 @@ defmodule Store.CustomersFixtures do
     {:ok, customer} =
       attrs
       |> Enum.into(%{
-        Last_name: "some Last_name",
+        last_name: "some last_name",
         email: "some email",
         first_name: "some first_name",
         password_hash: "some password_hash",

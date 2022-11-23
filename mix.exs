@@ -45,6 +45,12 @@ defmodule Store.MixProject do
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
+      {:absinthe, "~> 1.7", override: true},
+      {:absinthe_plug, "~> 1.5"},
+      {:absinthe_relay, "~> 1.5"},
+      {:absinthe_ecto, "~> 0.1.3"},
+      {:absinthe_error_payload, "~> 1.1"},
+      {:absinthe_phoenix, "~> 2.0"},
       {:argon2_elixir, "~> 2.0"}
     ]
   end

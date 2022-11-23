@@ -5,8 +5,11 @@ defmodule StoreWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api", StoreWeb do
+  scope "/" do
     pipe_through :api
+
+    forward "/graphql", Absinthe.Plug, schema: StoreGraphql.Schema, json_codec: Jason
+    forward "/graphiql", Absinthe.Plug.GraphiQL, schema: StoreGraphql.Schema, json_codec: Jason
   end
 
   # Enables LiveDashboard only for development

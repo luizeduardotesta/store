@@ -4,12 +4,12 @@ defmodule Store.Customers.Customer do
 
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
-  @required_fields ~w(email first_name Last_name password password_confirmation role)a
+  @required_fields ~w(email first_name last_name password password_confirmation role)a
   @optional_fields ~w(password_hash)a
   schema "customers" do
-    field :Last_name, :string
     field :email, :string
     field :first_name, :string
+    field :last_name, :string
     field :password, :string, virtual: true
     field :password_confirmation, :string
     field :password_hash, :string

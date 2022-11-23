@@ -11,7 +11,7 @@
 # and so on) as they will fail if something goes wrong.
 
 customer = %{
-  Last_name: "1234",
+  last_name: "1234",
   email: "teste@teste.com",
   first_name: "1234",
   password: "123456",
